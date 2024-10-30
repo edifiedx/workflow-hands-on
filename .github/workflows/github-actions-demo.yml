@@ -21,13 +21,14 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+      - name: Print branch event info
       - run: |
           echo "triggering event: ${{ github.event_name }}"
           echo "triggering branch: ${{ github.ref }}
           
       - uses: actions/checkout@v4
       - name: List files in the repo
-      - run: |
+        run: |
           echo "Repo contains:"
           tree
 
