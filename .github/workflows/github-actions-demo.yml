@@ -22,16 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print branch event info
-      - run: |
+        run: |
           echo "triggering event: ${{ github.event_name }}"
-          echo "triggering branch: ${{ github.ref }}
+          echo "triggering branch: ${{ github.ref }}"
           
       - uses: actions/checkout@v4
+      
       - name: List files in the repo
         run: |
           echo "Repo contains:"
           tree
-
-        
-      
-      # Add your job steps here
